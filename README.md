@@ -25,6 +25,13 @@ httpsA//mail.google.com/mail/u/0/Ainbox
 
 ## Installation
 
+### DMG Installer (Recommended)
+1. Download `TypeMyClipboard-Installer.dmg`
+2. Double-click the DMG to mount it
+3. Drag `TypeMyClipboard.app` to the Applications folder
+4. Launch from Applications folder or Spotlight search
+
+### Manual Launch (For Developers)
 1. Clone or download this repository
 2. Build the .app bundle:
    ```bash
@@ -79,6 +86,28 @@ The first time you run the application, macOS will ask for accessibility permiss
 swift build -c release
 ```
 
+## Uninstallation
+
+To remove TypeMyClipboard from your system, simply delete:
+```
+/Applications/TypeMyClipboard.app
+```
+
+## Distribution
+
+### Creating a DMG for Distribution
+To create a DMG installer for distribution:
+
+```bash
+./build-app-bundle.sh
+./create-dmg.sh
+```
+
+This creates `TypeMyClipboard-Installer.dmg` (1.2MB) that includes:
+- TypeMyClipboard.app
+- Applications folder shortcut
+- Installation instructions
+
 ## Project Structure
 
 ```
@@ -88,8 +117,10 @@ typeMyClipboard/
 ├── Package.swift                  # Swift Package Manager config
 ├── build-app-bundle.sh            # App bundle build script
 ├── launch-app.sh                  # App bundle launcher
+├── create-dmg.sh                  # DMG installer creator
 ├── icon.png                       # Custom icon (1024x1024 PNG)
 ├── TypeMyClipboard.app/           # Built app bundle
+├── TypeMyClipboard-Installer.dmg  # DMG installer (created)
 ├── APP_BUNDLE_GUIDE.md            # App bundle documentation
 └── README.md                      # This file
 ```
