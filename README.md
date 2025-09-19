@@ -14,10 +14,10 @@ A macOS menu bar application that types out the contents of your clipboard when 
 - Reads clipboard content automatically
 - Types text character by character using macOS accessibility APIs
 - Configurable delay before typing starts
-- Handles special characters and modifiers correctly
+- Handles special characters and modifiers correctly 
 - Custom application icon support
 - Real-time clipboard monitoring
-
+httpsA//mail.google.com/mail/u/0/Ainbox
 ## Requirements
 
 - macOS 13.0 or later
